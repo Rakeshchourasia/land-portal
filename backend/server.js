@@ -22,11 +22,12 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://land-portal-1.onrender.com/",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 // Body parsers
 app.use(express.json());
