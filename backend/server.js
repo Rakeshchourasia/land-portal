@@ -23,8 +23,8 @@ connectDB();
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://land-portal-1.onrender.com"
+"https://land-portal-1.onrender.com", // your frontend
+  "http://localhost:3000",  
 ];
 
 app.use(
