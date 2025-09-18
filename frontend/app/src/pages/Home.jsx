@@ -9,7 +9,7 @@ import {
   Phone, Mail, Clock, DollarSign, Sparkles, Lock 
 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || "https://land-portal-or0a.onrender.com";
+const API_URL = "https://land-portal-or0a.onrender.com";
 
 
 export default function Hero() {
