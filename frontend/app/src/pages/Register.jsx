@@ -18,7 +18,9 @@ export default function Register() {
     setLoading(true);
     setError('');
     try {
-     await api.post("/auth/register", { name, email, password, role });
+   // Correct endpoint with /api prefix
+await api.post("/auth/register", { name, email, password, role });
+
       navigate('/'); // Redirect to home after successful registration
     } catch (err) {
       setError(err.response?.data?.message || "An error occurred.");

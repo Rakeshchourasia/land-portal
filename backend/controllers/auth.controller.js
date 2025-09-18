@@ -18,7 +18,7 @@ const registerUser = async (req, res, next) => {
       throw new Error('User already exists');
     }
 
-    const user = await api.post("/api/auth/register", { name, email, password, role });
+    const user = await api.post("/auth/register", { name, email, password, role });
 
     if (user) {
       res.status(201).json({
@@ -44,7 +44,7 @@ const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     
-    await api.post("/api/auth/login", { email, password });
+    await api.post("/auth/login", { email, password });
 
     if (user && (await user.matchPassword(password))) {
       res.json({
