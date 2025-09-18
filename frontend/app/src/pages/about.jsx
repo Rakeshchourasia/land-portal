@@ -92,7 +92,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
               <div className="relative bg-white p-10 rounded-3xl shadow-2xl">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex  items-center justify-center">
                     <Eye className="w-6 h-6 text-emerald-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 ml-4">Our Vision</h3>
