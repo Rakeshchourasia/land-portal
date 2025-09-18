@@ -3,7 +3,8 @@ import axios from 'axios';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: "https://land-portal-or0a.onrender.com",
+   withCredentials: true,
 });
 
 // --- THIS IS THE CRITICAL PART ---
