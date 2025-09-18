@@ -33,7 +33,7 @@ export default function Hero() {
 
     const fetchFeaturedProperties = async () => {
       try {
-        const { data } = await api.get('/properties?limit=4&sortBy=createdAt:desc'); 
+        const { data } = await api.get('/api/properties?limit=4&sortBy=createdAt:desc'); 
         setFeaturedProperties(data.properties);
       } catch (err) {
         setError("Could not load featured properties.");

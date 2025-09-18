@@ -18,7 +18,7 @@ const registerUser = async (req, res, next) => {
       throw new Error('User already exists');
     }
 
-    const user = await User.create({ name, email, password, role });
+    const user = await api.post("/api/auth/register", { name, email, password, role });
 
     if (user) {
       res.status(201).json({
@@ -43,7 +43,8 @@ const registerUser = async (req, res, next) => {
 const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    
+    await api.post("/api/auth/login", { email, password });
 
     if (user && (await user.matchPassword(password))) {
       res.json({
